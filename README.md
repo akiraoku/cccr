@@ -6,13 +6,14 @@ Console Command Client can control IMAGENICS machine via commandlines.
 
 - Download a compiled binary for Windows [releases](https://github.com/akiraoku/cccr/releases/download/v1/cccr.exe) page.
 - Download a compiled binary for Linux [releases](https://github.com/akiraoku/cccr/releases/download/v1/cccr) page.
+- Download a compiled binary for macOS [releases](https://github.com/akiraoku/cccr/releases/download/v1/for_intel_mac_cccr.zip) page.
 
 ## Usage
 
 1. Syntax
 
 ```
-cccr  [tcp|udp] ["commnad"] [addr:port]
+cccr [tcp|udp] ["commnad"] [addr:port]
 ```
 
 * 'command' must be enclosed in double quotes.
@@ -37,7 +38,6 @@ cccr tcp "1,1\r2,2\r3,3\rw" 192.168.2.254:1300
 cccr tcp "w" 192.168.2.254:1300 >> ./log.txt
 ```
 
-
 ## Contributing
  
 1. Fork it!
@@ -47,9 +47,9 @@ cccr tcp "w" 192.168.2.254:1300 >> ./log.txt
 5. Submit a pull request :D
 
 ## History
- 
+
 Version 1.01.0
- 
+
 ## Credits
- 
+
 Lead Developer - Oku,Akira
