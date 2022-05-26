@@ -1,7 +1,7 @@
 ﻿# Console Command Client
- 
-Console Command Client is control Imagenics machine.
- 
+
+Console Command Client can control IMAGENICS machine via commandlines.
+
 ## Installation
 
 - Download a compiled binary for Windows [releases](https://github.com/akiraoku/cccr/releases/download/v1/cccr.exe) page.
@@ -12,7 +12,7 @@ Console Command Client is control Imagenics machine.
 1. Syntax
 
 ```
-cccr cccr  [tcp|udp] ["commnad"] [addr:port]
+cccr  [tcp|udp] ["commnad"] [addr:port]
 ```
 
 * 'command' must be enclosed in double quotes.
