@@ -12,7 +12,7 @@ ConsoleSocketSample1 is control Imagenics machine.
 1. Syntax
 
 ```
->cccr cccr  [tcp|udp] ['Commnad'] [addr:port]
+cccr cccr  [tcp|udp] ['Commnad'] [addr:port]
 ```
 
 * argument "udp" is not yet implemented as of v1.x .
