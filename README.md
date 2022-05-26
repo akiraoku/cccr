@@ -15,7 +15,7 @@ Console Command Client is control Imagenics machine.
 cccr cccr  [tcp|udp] ["commnad"] [addr:port]
 ```
 
-* commands must be enclosed in double quotes.
+* 'command' must be enclosed in double quotes.
 * The argument "udp" is not yet implemented as of v1.x .
 * The most trailing carriage return can be reduced.
 
