@@ -4,8 +4,8 @@ ConsoleSocketSample1 is control Imagenics machine.
  
 ## Installation
 
-- Download a compiled binary Windows [releases](https://github.com/akiraoku/cccr/releases/download/v1/cccr.exe) page.
-- Download a compiled binary Linux [releases](https://github.com/akiraoku/cccr/releases/download/v1/cccr) page.
+- Download a compiled binary for Windows [releases](https://github.com/akiraoku/cccr/releases/download/v1/cccr.exe) page.
+- Download a compiled binary for Linux [releases](https://github.com/akiraoku/cccr/releases/download/v1/cccr) page.
 
 ## Usage
 
