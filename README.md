@@ -34,7 +34,7 @@ cccr tcp "1,1\r2,2\r3,3\rw" 192.168.2.254:1300
 4. Example3 - Redirecting to log.txt -
 
 ```
-cccr cccr tcp "w" 192.168.2.254:1300 >> ./log.txt
+cccr tcp "w" 192.168.2.254:1300 >> ./log.txt
 ```
 
 
