@@ -1,4 +1,5 @@
-use tokio::io::{AsyncWriteExt,AsyncReadExt};
+//use tokio::io::{AsyncWriteExt,AsyncReadExt};
+use tokio::io::{AsyncWriteExt,};
 use tokio::net::{TcpStream};
 use std::env;
 use std::process;
@@ -11,11 +12,19 @@ extern crate log;
 
 // constants
 //const ECHO_SERVER_ADDRESS: &str = "192.168.2.254:1300";
+
 /*
- quart auditioning in terminals
-.\exe tcp '#$eA00000' 192.168.2.254:1300	-> not recommend
-.\exe tcp "#$eA00000" 192.168.2.254:1300	-> for Linux, powershell.exe, pwsh.exe,cmd.exe
-.\exe tcp #$eA00000 192.168.2.254:1300		-> not recommend
+    // format of command arguments
+    cccr  [tcp|udp] ['Commnad'] [addr:port]
+    // quart auditioning in terminals
+    cccr tcp '#$eA00000' 192.168.2.254:1300	        -> not recommend
+    cccr tcp "#$eA00000" 192.168.2.254:1300	        -> for Linux, Mac, Windows
+    cccr tcp #$eA00000 192.168.2.254:1300	        -> not recommend
+    // Combining Commands
+    Combining Commands
+    cccr tcp "1,1\r2,2\r3,3" 192.168.2.254:1300     -> "1,1[CR]" and "2,2[CR]" and "3,3[CR]"
+    Request Response
+    cccr tcp "w" 192.168.2.254:1300                 -> "w[CR]"
 */
 
 #[tokio::main]
@@ -45,11 +54,15 @@ async fn main() {
                     stream.local_addr().unwrap().port()
                 );
                 // set our message as hello world
-                let mut message :String = cmd.to_string() ;
-                message = message.replace("\r\n","");
-                message = message + "\r";
-                println!("{} : sent: {}", Utc::now(), message);
-                let _ = stream.write_all(message.as_bytes()).await;
+                let message :String = cmd.to_string();
+                let v: Vec<&str> = message.split("\\r").collect();
+                for c in v {
+                    println!("{} : command array {:?}", Utc::now(), c);
+                    let c = c.replace("\r\n","");
+                    let c = c + "\r";
+                    println!("{} : sent: {}", Utc::now(), c);
+                    let _ = stream.write_all(c.as_bytes()).await;
+                }
                 // wait
                 let t = 1500;
                 let wt = time::Duration::from_millis(t);
