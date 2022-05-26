@@ -1,6 +1,6 @@
 ﻿# Console Command Client
  
-ConsoleSocketSample1 is control Imagenics machine.
+Console Command Client is control Imagenics machine.
  
 ## Installation
 
@@ -12,10 +12,12 @@ ConsoleSocketSample1 is control Imagenics machine.
 1. Syntax
 
 ```
-cccr cccr  [tcp|udp] ['Commnad'] [addr:port]
+cccr cccr  [tcp|udp] ["commnad"] [addr:port]
 ```
 
-* argument "udp" is not yet implemented as of v1.x .
+* commands must be enclosed in double quotes.
+* The argument "udp" is not yet implemented as of v1.x .
+* The most trailing carriage return can be reduced.
 
 2. Example1 - Send Single Command -
 
@@ -32,7 +34,7 @@ cccr tcp "1,1\r2,2\r3,3\rw" 192.168.2.254:1300
 4. Example3 - Redirecting to log.txt -
 
 ```
-cccr cccr tcp "w" 192.168.2.254:1300 >> log.txt
+cccr cccr tcp "w" 192.168.2.254:1300 >> ./log.txt
 ```
 
 
