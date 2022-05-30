@@ -1,4 +1,4 @@
-﻿# Console Command Client
+﻿# Console Command Client by Rust
 
 Console Command Client can control IMAGENICS machine via commandlines.
 
