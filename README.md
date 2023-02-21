@@ -13,29 +13,30 @@ Console Command Client can control IMAGENICS machine via commandlines.
 1. Syntax
 
 ```
-cccr [tcp|udp] ["commnad"] [addr:port]
+cccr [tcp|udp] ['commnad'] [addr:port]
 ```
 
-* 'command' must be enclosed in double quotes.
-* The argument "udp" is not yet implemented as of v1.x .
+* The command must be enclosed in single quotes on UNIX terminal and Windows Terminal.
+* The command must be enclosed in double quotes on Windows cmd.exe.
+* The argument udp is not yet implemented as of v1.x .
 * The most trailing carriage return can be reduced.
 
 2. Example1 - Send Single Command -
 
 ```
-cccr tcp "#$eA00000" 192.168.2.254:1300
+cccr tcp '#$eA00000' 192.168.2.254:1300
 ```
 
 3. Example2 - Combining Commands -
 
 ```
-cccr tcp "1,1\r2,2\r3,3\rw" 192.168.2.254:1300
+cccr tcp '1,1\r2,2\r3,3\rw' 192.168.2.254:1300
 ```
 
 4. Example3 - Redirecting to log.txt -
 
 ```
-cccr tcp "w" 192.168.2.254:1300 >> ./log.txt
+cccr tcp 'w' 192.168.2.254:1300 >> ./log.txt
 ```
 
 ## Contributing
@@ -48,7 +49,7 @@ cccr tcp "w" 192.168.2.254:1300 >> ./log.txt
 
 ## History
 
-Version 1.01.0
+Version 1.02.0
 
 ## Credits
 
