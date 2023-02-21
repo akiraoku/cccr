@@ -49,7 +49,7 @@ cccr tcp 'w' 192.168.2.254:1300 >> ./log.txt
 
 ## History
 
-Version 1.02.0
+Version 1.01.0
 
 ## Credits
 
